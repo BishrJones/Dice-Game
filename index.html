@@ -11,11 +11,17 @@
 
 <body>
     <h1>Let's Play Street Dice!</h1>
+    <div id="container">
+        <div class="cube" id="diceOne">
+            <p id="displayRandomNum1"></p>
+        </div>
+        <div class="cube" id="diceTwo">
+            <p id="displayRandomNum2"></p>
+        </div>
+    </div>
 
-    <div class="cube" id="diceOne"></div>
-    <div class="cube" id="diceTwo"></div>
-    <button id="roll" type="button">Roll</button>
-    <button id="reset" type="reset">Reset</button>
+    <button class="button" id="roll" type="button">Roll</button>
+    <button class="button" id="reset" type="reset">Reset</button>
     <p id="message"></p>
     <form action="">
         <div>
@@ -24,6 +30,14 @@
         </div>
         <button id="amount-submisson">Bet!</button>
     </form>
+    <div id="playerContainer">
+        <div id="player1">
+            <p>Player 1:</p>
+        </div>
+        <div id="player2">
+            <p>Player 2:</p>
+        </div>
+    </div>
     <script src="js/app.js"></script>
 </body>
 
