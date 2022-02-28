@@ -10,12 +10,17 @@
 </head>
 
 <body>
-    <h1>Let's Play Street Dice!</h1>
-    <!-- <div>
+    <h1>Let's Play Dice!</h1>
+    <div>
         <h3>CHOOSE YOUR CHIPS.</h3>
-        <p>1 chip = $100</p>
-
-    </div> -->
+        <p>1 chip = $25</p>
+        <div id="chipButtons">
+            <button id="fiveChips">5 chips</button>
+            <button id="tenChips">10 chips</button>
+            <button id="fifteenChips">15 chips</button>
+            <button id="twentyChips">20 chips</button>
+        </div>
+    </div>
     <div id="container">
         <div class="cube" id="diceOne">
             <p id="displayRandomNum1"></p>
@@ -28,13 +33,18 @@
     <button class="button" id="roll" type="button">Roll</button>
     <button class="button" id="reset" type="reset">Reset</button>
     <p id="message"></p>
-    <form action="">
+    <form id="form">
         <div id="form">
             <!-- <label for="amount">amount</label> -->
-            <input type="text" name="anount" id="amount" placeholder="Enter amount">
-            <button id="amountSubmisson">Bet!</button>
+            <input type="number" name="amount" id="amountWagered" placeholder="Enter amount" required>
+            <input type="submit" value="Place wager">
+            <!-- <button id="amountSubmisson">Bet!</button> -->
         </div>
     </form>
+    <div>
+        <p>Balance: $<span id="balance"></span></p>
+
+    </div>
     <!-- <div id="playerContainer">
         <div id="player1">
             <p>Player 1:</p>
