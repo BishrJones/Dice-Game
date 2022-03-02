@@ -17,6 +17,7 @@ const fifteenChips = document.getElementById('fifteenChips')
 const twentyChips = document.getElementById('twentyChips')
 const chipBalance = document.getElementById('balance')
 const form = document.getElementById('form')
+    // const amountWagered = document.getElementById('amountWagered').value
 
 
 // define player point
@@ -50,10 +51,21 @@ const firstRollCheck = (randomNum1, randomNum2) =>
     {
         if (randomNum1 + randomNum2 === 7 || randomNum1 + randomNum2 === 11) {
             message.innerText = 'nice! you won.'
+            const bet = document.getElementById('amountWagered').value
+            const bank = document.getElementById('balance').innerText
+            const bankNum = parseInt(bank, 10)
+            const betAmount = parseInt(bet, 10)
+            document.getElementById('balance').innerText = bankNum + betAmount
         } else if (randomNum1 + randomNum2 === 2 || randomNum1 + randomNum2 === 3 || randomNum1 + randomNum2 === 12) {
             // const addbalance = chipBalance +
 
             message.innerText = 'Yikes, Pass the dice.'
+
+            const bet = document.getElementById('amountWagered').value
+            const bank = document.getElementById('balance').innerText
+            const betAmount = parseInt(bet, 10)
+            const bankNum = parseInt(bank, 10)
+            document.getElementById('balance').innerText = bankNum - betAmount
         } else {
             const pointMessage = document.getElementById('pointMessage')
             let totalNums = randomNum1 + randomNum2
@@ -62,7 +74,7 @@ const firstRollCheck = (randomNum1, randomNum2) =>
                 // console.log(playerPoint)
             message.innerText = 'Roll your point again to win!'
             firstRollButton.style.display = 'none'
-            pointRollButton.style.display = 'block'
+            pointRollButton.style.display = 'inline'
 
         }
     }
@@ -79,12 +91,23 @@ const pointRoll = (randomNum1, randomNum2) => {
             playerPoint = null
             message.innerText = 'tough loss!'
             pointRollButton.style.display = 'none'
-            firstRollButton.style.display = 'block'
+            firstRollButton.style.display = 'inline'
+            const bet = document.getElementById('amountWagered').value
+            const bank = document.getElementById('balance').innerText
+            const betAmount = parseInt(bet, 10)
+            const bankNum = parseInt(bank, 10)
+            document.getElementById('balance').innerText = bankNum - betAmount
+
         } else if (totalNum === playerPoint) {
             message.innerText = 'you won !'
             playerPoint = 0
             pointRollButton.style.display = 'none'
-            firstRollButton.style.display = 'block'
+            firstRollButton.style.display = 'inline'
+            const bet = document.getElementById('amountWagered').value
+            const bank = document.getElementById('balance').innerText
+            const betAmount = parseInt(bet, 10)
+            const bankNum = parseInt(bank, 10)
+            document.getElementById('balance').innerText = bankNum + betAmount
         } else {
             message.innerText = 'Keep on rolling'
             console.log('roll again')
@@ -174,22 +197,23 @@ const pickChips = (fiveChips) => {
         chipBalance.innerText = balanceNum
         console.log(balanceNum)
 
-        form.addEventListener('submit', function(event) {
-            checkConditions = firstRollCheck(randomNum1, randomNum2)
-            event.preventDefault() //this prevents the form from auto submitting 
-                // console.log('form has been submitted')
+        // form.addEventListener('submit', function(event) {
+        //     rollConditions = firstRollCheck(randomNum1, randomNum2)
 
-            const amountWagered = document.getElementById('amountWagered').value
-                // console.log('this is the value of the num input in the form \n', amountWagered)
+        //     event.preventDefault() //this prevents the form from auto submitting 
+        //         // console.log('form has been submitted')
 
-            const numAmount = parseInt(amountWagered, 10)
-                // console.log(numAmount)
-            const newChipBalance = numAmount + balanceNum
-                // console.log(newChipBalance)
-            chipBalance.innerText = newChipBalance
+        //     const amountWagered = document.getElementById('amountWagered').value
+        //         // console.log('this is the value of the num input in the form \n', amountWagered)
+
+        //     const numAmount = parseInt(amountWagered, 10)
+        //         // console.log(numAmount)
+        //     const newChipBalance = numAmount + balanceNum
+        //         // console.log(newChipBalance)
+        //     chipBalance.innerText = newChipBalance
 
 
-        })
+        // })
 
     }
 }
@@ -208,15 +232,15 @@ tenChips.addEventListener('click', function() {
         const balanceNum = 250
         chipBalance.innerText = balanceNum
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault()
-            const amountWagered = document.getElementById('amountWagered').value
-            const numAmount = parseInt(amountWagered, 10)
-            const newChipBalance = numAmount + balanceNum
-            chipBalance.innerText = newChipBalance
+        // form.addEventListener('submit', function(event) {
+        //     event.preventDefault()
+        //     const amountWagered = document.getElementById('amountWagered').value
+        //     const numAmount = parseInt(amountWagered, 10)
+        //     const newChipBalance = numAmount + balanceNum
+        //     chipBalance.innerText = newChipBalance
 
 
-        })
+        // })
     }
 })
 
@@ -230,15 +254,15 @@ fifteenChips.addEventListener('click', function() {
 
 
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault()
-            const amountWagered = document.getElementById('amountWagered').value
-            const numAmount = parseInt(amountWagered, 10)
-            const newChipBalance = numAmount + balanceNum
-            chipBalance.innerText = newChipBalance
+        // form.addEventListener('submit', function(event) {
+        //     event.preventDefault()
+        //     const amountWagered = document.getElementById('amountWagered').value
+        //     const numAmount = parseInt(amountWagered, 10)
+        //     const newChipBalance = numAmount + balanceNum
+        //     chipBalance.innerText = newChipBalance
 
 
-        })
+        // })
     }
 })
 
@@ -250,15 +274,15 @@ twentyChips.addEventListener('click', function() {
         const balanceNum = 500
         chipBalance.innerText = balanceNum
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault()
-            const amountWagered = document.getElementById('amountWagered').value
-            const numAmount = parseInt(amountWagered, 10)
-            const newChipBalance = numAmount + balanceNum
-            chipBalance.innerText = newChipBalance
+        // form.addEventListener('submit', function(event) {
+        //     event.preventDefault()
+        //     const amountWagered = document.getElementById('amountWagered').value
+        //     const numAmount = parseInt(amountWagered, 10)
+        //     const newChipBalance = numAmount + balanceNum
+        //     chipBalance.innerText = newChipBalance
 
 
-        })
+        // })
     }
 
 })
