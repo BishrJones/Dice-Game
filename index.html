@@ -30,21 +30,29 @@
         </div>
     </div>
 
-    <button class="button" id="roll" type="button">Roll</button>
+    <button class="button" id="roll" type="button">First Roll</button>
+    <button id="pointRoll">Point Roll</button>
     <button class="button" id="reset" type="reset">Reset</button>
+    <div>
+        <p id="pointMessage"></p>
+    </div>
     <p id="message"></p>
     <form id="form">
         <div id="form">
             <!-- <label for="amount">amount</label> -->
-            <input type="number" name="amount" id="amountWagered" placeholder="Enter amount" required>
-            <input type="submit" value="Place wager">
+            <input type="text" name="amount" id="amountWagered" placeholder="Enter amount" required>
+            <!-- <button id="submit">Place Wager</button> -->
+            <input type="submit" value="Place Wager">
             <!-- <button id="amountSubmisson">Bet!</button> -->
         </div>
     </form>
     <div>
-        <p>Balance: $<span id="balance"></span></p>
+        <p>Balance: $<span id="balance">0</span></p>
 
     </div>
+
+    <h3 id="instructions">INSTRUCTIONS</h3>
+    <!-- <p>player must roll any number other than 2,3 or 12 to win money. However if 2,3, or 12 is rolled, the player loses the amount of money wagered. </p> -->
     <!-- <div id="playerContainer">
         <div id="player1">
             <p>Player 1:</p>
