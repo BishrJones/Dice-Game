@@ -1,8 +1,22 @@
 body {
-    background-color: whitesmoke;
+    background-color: #ccc5b9;
+    text-align: center;
 }
 
-h1 {}
+h1 {
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+}
+
+p{
+    font-family: 'Kelly Slab', cursive; 
+    text-align: center;
+}
 
 .cube {
     width: 100px;
