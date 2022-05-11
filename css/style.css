@@ -31,25 +31,40 @@ p{
     border: 1px solid black;
     box-shadow: 0 0 20px;
     flex-direction: row;
+    margin: 1em .5em 1em .5em;
 }
 
-.button {}
-
+.buttons {
+    display: flex; 
+    justify-content: center;
+}
+.chipButton{
+    margin: auto 0;
+}
 #instructions {
     padding-top: 20px;
 }
 
 #container {
     display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: center;
+    /* margin: auto; */
 }
 
+#form {
+    display: flex; 
+    justify-content: center;
+}
 
 /* #playerContainer {
     display: flex;
     justify-content: space-evenly;
 } */
-
+#chipButtons{
+    display: flex;
+    justify-content: center;
+    /* justify-items: center; */
+}
 #player1 {}
 
 #diceOne {}
