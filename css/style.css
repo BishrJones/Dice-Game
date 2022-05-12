@@ -1,21 +1,24 @@
-body {
-    background-color: blue;
+ body {
+    background-color: #eae2b7;
     text-align: center;
 }
 
 h1 {
     font-family: 'Londrina Solid', cursive;
     text-align: center;
+    color: #003049;
 }
 
 h3{
     font-family: 'Londrina Solid', cursive;
     text-align: center;
+    color: #003049;
 }
 
 p{
     font-family: 'Kelly Slab', cursive; 
     text-align: center;
+    color: #003049;
 }
 
 .cube {
@@ -39,9 +42,42 @@ p{
     
     justify-content: center;
 }
-.chipButton{
-    margin: 2em;
+
+.btn-primary{
+    background-color: #fcbf49; 
+    color: #003049;
+    border:#fcbf49
 }
+
+.btn-primary:hover{
+    background-color: #f77f00; 
+    color: #003049;
+}
+
+.btn-success{
+    background-color: #a3b18a;
+    color: #003049;
+    border: #a3b18a;
+}
+
+.btn-success:hover{
+    color: #003049;
+}
+
+.btn-danger{
+    background-color: #d62828;
+    color: #003049;
+}
+
+.btn-danger:hover{
+    color: #003049;
+}
+/* .bg-light{
+    background-color: black;
+} */
+/* .chipButton{
+   background-color: #fcbf49 ;
+} */
 #instructions {
     padding-top: 20px;
 }
