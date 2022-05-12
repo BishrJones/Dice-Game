@@ -1,5 +1,5 @@
 body {
-    background-color: #ccc5b9;
+    background-color: blue;
     text-align: center;
 }
 
@@ -36,10 +36,11 @@ p{
 
 .buttons {
     display: flex; 
+    
     justify-content: center;
 }
 .chipButton{
-    margin: auto 0;
+    margin: 2em;
 }
 #instructions {
     padding-top: 20px;
