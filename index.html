@@ -28,10 +28,10 @@
     </div>
     <div id="container">
         <div class="cube" id="diceOne">
-            <p id="displayRandomNum1"></p>
+            <p class="rollNumber" id="displayRandomNum1"></p>
         </div>
         <div class="cube" id="diceTwo">
-            <p id="displayRandomNum2"></p>
+            <p class="rollNumber" id="displayRandomNum2"></p>
         </div>
     </div>
     <div class="buttons"> 
@@ -57,7 +57,22 @@
 
     </div>
 
-    <h3 id="instructions">INSTRUCTIONS</h3>
+    <p>
+        <!-- <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          INSTRUCTIONS
+        </a> -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          INSTRUCTIONS
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <div>1) Choose an amount of chips to start the game with.</div> 
+          <div>2) Once you have chosen your chips, in the input field put the amount you would like to wager with.</div>
+          <div>3) Since this is your first roll, click the first roll button to get your point (7 or 11 wins on first roll).</div>
+         <div> 4) If the initial roll grants you a number of anything other than 7 or 11, you will be prompted to click the point roll button to continue rolling until you either roll your point(win) or crap out(lose).</div>
+        </div>
+      </div>
     <!-- <p>player must roll any number other than 2,3 or 12 to win money. However if 2,3, or 12 is rolled, the player loses the amount of money wagered. </p> -->
     <!-- <div id="playerContainer">
         <div id="player1">

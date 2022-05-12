@@ -21,6 +21,10 @@ p{
     color: #003049;
 }
 
+button{
+    font-family: 'Kelly Slab', cursive; 
+}
+
 .cube {
     width: 100px;
     height: 100px;
@@ -28,7 +32,7 @@ p{
     /* margin: 10px; */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid black;
@@ -54,6 +58,11 @@ p{
     color: #003049;
 }
 
+.btn-primary:active{
+    background-color: #f77f00; 
+    color: #003049;
+}
+
 .btn-success{
     background-color: #a3b18a;
     color: #003049;
@@ -71,6 +80,17 @@ p{
 
 .btn-danger:hover{
     color: #003049;
+}
+
+.card-body{
+    background-color: #eae2b7;
+    color: #003049;
+    border: none;
+    font-family: 'Londrina Solid', cursive;
+}
+
+.rollNumber{
+    margin: .1em 0 .1em 0;
 }
 /* .bg-light{
     background-color: black;
